@@ -1,23 +1,27 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div>
+    <my-header></my-header>
+    <my-provider></my-provider>
   </div>
 </template>
 
 <script>
 
+import header from './components/header';
+import provider from './components/provider';
 
 export default {
   name: 'App',
   components: {
+    'my-provider': provider,
+    'my-header': header
     
   },
   data: function() {
-return {
-    
-  };
-}
+    return {
+        
+    };
+  }
 }
 </script>
 
@@ -29,5 +33,6 @@ return {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+  margin-left: 60px;
 }
 </style>
