@@ -24,32 +24,7 @@
    export default{
     data: function() {
         return {
-            providers: [
-                {
-                    id: 1,
-                    name: 'Steven',
-                    address: '12 paper',
-                    phone: '555.555.5555'
-                },
-                                {
-                    id: 2,
-                    name: 'Jeo',
-                    address: '42 towel',
-                    phone: '333.555.5555'
-                },
-                                {
-                    id: 1,
-                    name: 'Scott',
-                    address: 'Lake St',
-                    phone: '444.555.5555'
-                },
-                                {
-                    id: 1,
-                    name: 'Doctor Strange',
-                    address: 'New York',
-                    phone: '222.555.5555'
-                },
-            ]
+
         };
     },
     methods: {
@@ -60,7 +35,8 @@
                 phone: this.$refs.pphone.value
             })
         }
-    }
+    },
+    props: ['providers']
    }
 
 </script>
