@@ -1,6 +1,7 @@
 <template>
   <div>
     <my-header></my-header>
+    <my-search></my-search>
     <my-provider></my-provider>
   </div>
 </template>
@@ -9,13 +10,14 @@
 
 import header from './components/header';
 import provider from './components/provider';
+import search from './components/search';
 
 export default {
   name: 'App',
   components: {
-    'my-provider': provider,
-    'my-header': header
-    
+    'my-header': header,
+    'my-search': search,
+    'my-provider': provider
   },
   data: function() {
     return {

@@ -1,29 +1,26 @@
 <template>
-
     <div class="container">
         <li v-for="provider in providers" :key="provider.name">
             <span>{{ provider.name }}</span>
             <span>{{ provider.address }}</span>
             <span>{{ provider.phone }}</span>
         </li>
-    <table>
+      <table>
         <thead>
-            <tr>
-                <th colspan="3">Providers</th>
-            </tr>
+          <tr>
+            <th colspan="3">Providers</th>
+          </tr>
         </thead>
         <tbody>
-            <tr>
-                <td><input type="text" id="pname"></td>
-                <td><input type="text" id="paddress"></td>
-                <td><input type="text" id="pphone"></td>
-            </tr>
+          <tr>
+            <td><input type="text" id="pname"></td>
+            <td><input type="text" id="paddress"></td>
+            <td><input type="text" id="pphone"></td>
+          </tr>
         </tbody>
-    </table>
+      </table>
     </div>
 </template>
-
-when will we start to demo
 
 <script>
 
