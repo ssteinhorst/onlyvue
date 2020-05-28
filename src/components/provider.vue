@@ -1,24 +1,21 @@
 <template>
     <div class="container">
-        <li v-for="provider in providers" :key="provider.name">
-            <span>{{ provider.name }}</span>
-            <span>{{ provider.address }}</span>
-            <span>{{ provider.phone }}</span>
-        </li>
-      <table>
-        <thead>
-          <tr>
-            <th colspan="3">Providers</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td><input type="text" id="pname"></td>
-            <td><input type="text" id="paddress"></td>
-            <td><input type="text" id="pphone"></td>
-          </tr>
-        </tbody>
-      </table>
+        <div class="row">
+            <div class="col-sm" align="center">
+                Providers
+            </div>
+        </div>
+        <div class="row" v-for="provider in providers" :key="provider.name">
+            <div class="col-sm">{{ provider.name }}</div>
+            <div class="col-sm">{{ provider.address }}</div>
+            <div class="col-sm">{{ provider.phone }}</div>
+        </div>
+      <div class="row">
+            <div class="col-sm"><input type="text" id="pname" ref="pname"></div>
+            <div class="col-sm"><input type="text" id="paddress" ref="paddress"></div>
+            <div class="col-sm"><input type="text" id="pphone" ref="pphone"></div>
+      </div>
+      <button v-on:click="addProvider">Save</button>
     </div>
 </template>
 
@@ -54,6 +51,15 @@
                 },
             ]
         };
+    },
+    methods: {
+        addProvider: function() {
+            this.providers.push({
+                name: this.$refs.pname.value,
+                address: this.$refs.paddress.value,
+                phone: this.$refs.pphone.value
+            })
+        }
     }
    }
 

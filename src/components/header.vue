@@ -10,7 +10,7 @@
         </div>
       </div>
       <div class="col text-right mr-0 pr-0">
-        <p id="userName" class="m-0 mt-2" >Welcome: currentUserName</p>
+        <p id="userName" class="m-0 mt-2" >Welcome: {{user}}</p>
       </div>
     </div>
     <div class="navBar row m-1">

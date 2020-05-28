@@ -1,5 +1,7 @@
 <template>
-    <div class="container-fluid m-0 p-0">oh hai</div>
+  <div class="container">
+    I'm a container, hear me roar.
+  </div>
 </template>
 
 <script>
