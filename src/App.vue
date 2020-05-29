@@ -12,6 +12,8 @@ import header from './components/header';
 import provider from './components/provider';
 import search from './components/search';
 
+import providers from './assets/data.json';
+
 export default {
   name: 'App',
   components: {
@@ -21,7 +23,10 @@ export default {
   },
   data: function() {
     return {
-        providers: [
+      providers: providers.providers,
+        baseUrl: process.env.VUE_APP_BASE_URL,
+
+        providers2: [
           {
             id: 1,
             name: 'Steven',
@@ -48,6 +53,12 @@ export default {
           }
       ]
     };
+  },
+  methods: {
+    created(){
+      // Fetch Data
+      // this.fetchData();
+    }
   }
 }
 </script>
