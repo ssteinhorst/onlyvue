@@ -1,19 +1,17 @@
 <template>
-    <div class="container">
+    <div class="container border">
         <div class="row">
-            <div class="col-sm" align="center">
-                Providers
-            </div>
+          <div class="col-sm" align="center">Providers</div>
         </div>
         <div class="row" v-for="provider in providers" :key="provider.name">
-            <div class="col-sm">{{ provider.name }}</div>
-            <div class="col-sm">{{ provider.address }}</div>
-            <div class="col-sm">{{ provider.phone }}</div>
+          <div class="col-sm">{{ provider.name }}</div>
+          <div class="col-sm">{{ provider.address }}</div>
+          <div class="col-sm">{{ provider.phone }}</div>
         </div>
       <div class="row">
-            <div class="col-sm"><input type="text" id="pname" ref="pname"></div>
-            <div class="col-sm"><input type="text" id="paddress" ref="paddress"></div>
-            <div class="col-sm"><input type="text" id="pphone" ref="pphone"></div>
+        <div class="col-sm"><input type="text" id="pname" ref="pname"></div>
+        <div class="col-sm"><input type="text" id="paddress" ref="paddress"></div>
+        <div class="col-sm"><input type="text" id="pphone" ref="pphone"></div>
       </div>
       <button v-on:click="addProvider">Save</button>
     </div>
@@ -21,7 +19,7 @@
 
 <script>
 
-   export default{
+  export default {
     data: function() {
         return {
 
@@ -37,7 +35,7 @@
         }
     },
     props: ['providers']
-   }
+  }
 
 </script>
 

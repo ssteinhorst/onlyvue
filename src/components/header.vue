@@ -1,5 +1,5 @@
 <template>
-  <div class="headerBox container-fluid m-0 p-0">
+  <div class="headerBox border container-fluid m-0 p-0">
     <div id="topRow" class="topRow row w-100 mr-0" >
       <div class="col ml-0 mt-1 pl-0 align-middle">
         <a href="./">Home</a>
@@ -22,7 +22,7 @@
     </div>
   </div>
 </template>
-  
+
 <script>
    export default{
      data: function() {

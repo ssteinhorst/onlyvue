@@ -1,7 +1,7 @@
 <template>
   <div>
     <my-header></my-header>
-    <my-search></my-search>
+    <my-search v-bind:providers="providers"></my-search>
     <my-provider v-bind:providers="providers"></my-provider>
   </div>
 </template>
