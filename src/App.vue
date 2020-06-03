@@ -3,6 +3,7 @@
     <my-header></my-header>
     <my-search v-bind:providers="providers"></my-search>
     <my-provider v-bind:providers="providers"></my-provider>
+    <my-create v-bind:providers="providers"></my-create>
   </div>
 </template>
 
@@ -11,7 +12,7 @@
 import header from './components/header';
 import provider from './components/provider';
 import search from './components/search';
-
+import create from './components/create';
 import providers from './assets/data.json';
 
 export default {
@@ -19,45 +20,20 @@ export default {
   components: {
     'my-header': header,
     'my-search': search,
-    'my-provider': provider
+    'my-provider': provider,
+    'my-create': create
   },
   data: function() {
     return {
       providers: providers.providers,
-        baseUrl: process.env.VUE_APP_BASE_URL,
-
-        providers2: [
-          {
-            id: 1,
-            name: 'Steven',
-            address: '12 paper',
-            phone: '555.555.5555'
-          },
-          {
-            id: 2,
-            name: 'Jeo',
-            address: '42 towel',
-            phone: '333.555.5555'
-          },
-          {
-            id: 1,
-            name: 'Scott',
-            address: 'Lake St',
-            phone: '444.555.5555'
-          },
-          {
-            id: 1,
-            name: 'Doctor Strange',
-            address: 'New York',
-            phone: '222.555.5555'
-          }
-      ]
+      baseUrl: process.env.VUE_APP_BASE_URL,
     };
   },
   methods: {
     created(){
       // Fetch Data
       // this.fetchData();
+      console.log("in created");
     }
   }
 }
