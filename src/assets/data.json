@@ -152,7 +152,22 @@
       "url": "https://www.goodtherapy.org/",
       "datecreated": "2020-02-28",
       "dateedited": "2020-02-28",
-      "lastmodifiedby": "System"
+      "lastmodifiedby": "System",
+      "providers": [{
+        "id": 3,
+        "name": "Bone, Jim",
+        "type": "LCSW",
+        "phone": "385-247-2603",
+        "address": "211 E. 300 S. #209A 84111"
+      },
+      {
+        "id": 4,
+        "name": "Ertl, Michelle",
+        "type": "PhD",
+        "phone": "801-419-0139",
+        "address": "164 S. 900 E. 84102"
+      }
+    ]
     },
     {
       "id": 2,
@@ -164,7 +179,15 @@
       "url": "https://www.goodtherapy.org/",
       "datecreated": "2020-02-28",
       "dateedited": "2020-02-28",
-      "lastmodifiedby": "System"
+      "lastmodifiedby": "System",
+      "providers": [{
+        "id": 2,
+        "name": "Applegate, Crystal",
+        "type": "CMHC",
+        "phone": "435-228-7814",
+        "address": "1196 W. South Jordan Pkwy #D 84095"
+  
+      }]
     },
     {
       "id": 3,
@@ -176,7 +199,23 @@
       "url": "https://www.stuff.org/",
       "datecreated": "2020-02-28",
       "dateedited": "2020-02-28",
-      "lastmodifiedby": "System"
+      "lastmodifiedby": "System",
+      "providers":[{
+        "id": 1,
+        "name": "Alonzo, Anthony",
+        "type": "DMFT, LMFT, CFLE",
+        "phone": "385-247-0462",
+        "address": "43 W. 9000 S. #B1 84070"
+  
+      },
+      {
+        "id": 2,
+        "name": "Applegate, Crystal",
+        "type": "CMHC",
+        "phone": "435-228-7814",
+        "address": "1196 W. South Jordan Pkwy #D 84095"
+  
+      }]
     }
   ]
 }

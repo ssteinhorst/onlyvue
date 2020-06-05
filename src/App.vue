@@ -4,6 +4,7 @@
     <my-search v-bind:providers="providers"></my-search>
     <my-provider v-bind:providers="providers"></my-provider>
     <my-create v-bind:providers="providers"></my-create>
+  <my-facilities v-bind:facilities="facilities"></my-facilities>
   </div>
 </template>
 
@@ -13,7 +14,8 @@ import header from './components/header';
 import provider from './components/provider';
 import search from './components/search';
 import create from './components/create';
-import providers from './assets/data.json';
+import data from './assets/data.json';
+import facilities from './components/facilities';
 
 export default {
   name: 'App',
@@ -21,12 +23,13 @@ export default {
     'my-header': header,
     'my-search': search,
     'my-provider': provider,
-    'my-create': create
+    'my-create': create,
+    'my-facilities': facilities
   },
   data: function() {
     return {
-      providers: providers.providers,
-      baseUrl: process.env.VUE_APP_BASE_URL,
+      providers: data.providers,
+      facilities: data.facilities
     };
   },
   methods: {
