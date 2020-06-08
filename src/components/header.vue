@@ -13,13 +13,6 @@
         <p id="userName" class="m-0 mt-2" >Welcome: {{user}}</p>
       </div>
     </div>
-    <div class="navBar row m-1">
-      <div class="m-1" id="nav">
-        <p class="navLinks m-1">
-          Search | Create | Edit 
-        </p>
-      </div>
-    </div>
   </div>
 </template>
 
@@ -30,7 +23,8 @@
          environment: 'Development',
          user: 'Scott'
        }
-     }
+     },
+     props: ['']
    }
 
 </script>

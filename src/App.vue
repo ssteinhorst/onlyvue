@@ -1,10 +1,23 @@
 <template>
   <div>
     <my-header></my-header>
-    <my-search v-bind:providers="providers"></my-search>
-    <my-provider v-bind:providers="providers"></my-provider>
-    <my-create v-bind:providers="providers"></my-create>
-  <my-facilities v-bind:facilities="facilities"></my-facilities>
+    <div class="headerBox border container-fluid m-0 p-0">
+      <div class="navBar row m-1">
+        <div class="m-1" id="nav">
+          <p class="navLinks m-1">
+            <button v-on:click="toggleSearch">Search</button>
+            |
+            <button v-on:click="toggleEdit">Create</button>
+            |
+            <button v-on:click="toggleFacilities">Facilites</button>
+          </p>
+        </div>
+      </div>
+    </div>
+    <my-search v-if="searchEnabled" v-bind:providers="providers"></my-search>
+    <my-provider v-if="searchEnabled" v-bind:providers="providers"></my-provider>
+    <my-create v-if="createEnabled" v-bind:providers="providers"></my-create>
+  <my-facilities v-if="facilitiesEnabled" v-bind:facilities="facilities"></my-facilities>
   </div>
 </template>
 
@@ -29,7 +42,10 @@ export default {
   data: function() {
     return {
       providers: data.providers,
-      facilities: data.facilities
+      facilities: data.facilities,
+      createEnabled: false,
+      searchEnabled: true,
+      facilitiesEnabled: false
     };
   },
   methods: {
@@ -37,6 +53,21 @@ export default {
       // Fetch Data
       // this.fetchData();
       console.log("in created");
+    },
+    toggleEdit() {
+      this.createEnabled = this.createEnabled? false:true;
+      // if(this.createEnabled) {
+      //   this.createEnabled = false
+      // } else {
+      //   this.createEnabled = true;
+      // }
+    },
+    toggleSearch() {
+      this.searchEnabled = this.searchEnabled? false:true;
+    },
+    toggleFacilities() {
+      this.facilitiesEnabled = this.facilitiesEnabled? false:true;
+
     }
   }
 }
@@ -52,4 +83,6 @@ export default {
   margin-top: 60px;
   margin-left: 60px;
 }
+
+
 </style>

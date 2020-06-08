@@ -1,5 +1,14 @@
 <template>
-  <div class="container border">Search
+  <div class="container border">
+    <div class="row">
+      <div class="col">Search</div>
+      <div class="col">
+        <input type="radio" id="providerSearch" value="providerSearch" v-model="searchType"> Provider
+      </div>
+      <div class="col">
+        <input type="radio" id="facilitySearch" value="facilitySearch" v-model="searchType"> Facility
+      </div>
+    </div>
     <div class="row">
       <div class="col-sm" align="center">
         <input type="text" id="pname" ref="pname" placeholder="Name search">
@@ -12,7 +21,7 @@
       </div>
     </div>
     <div class="row">
-      <button v-on:click="addProvider">Go</button>
+      <button v-on:click="searchProvider">Go</button>
     </div>
   </div>
 </template>
@@ -21,17 +30,16 @@
   export default {
     data: function() {
       return {
-
+        providerSearch: true,
+        facilitySearch: false,
+        searchType: "providerSearch"
       };
     },
     methods: {
-      addProvider: function() {
-        this.providers.push({
-          name: this.$refs.pname.value,
-          address: this.$refs.paddress.value,
-          phone: this.$refs.pphone.value
-        });
-      }
+      searchProvider: function() {
+        // make axoios call to get providers from external soure?
+      },
+
     },
     props: ['providers']
   }
