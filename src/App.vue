@@ -16,7 +16,7 @@
     </div>
     <my-search v-if="searchEnabled" v-bind:providers="providers"></my-search>
     <my-provider v-if="searchEnabled" v-bind:providers="providers"></my-provider>
-    <my-create v-if="createEnabled" v-bind:providers="providers"></my-create>
+    <my-create v-if="createEnabled" v-bind:providers="providers" v-bind:facilities="facilities"></my-create>
   <my-facilities v-if="facilitiesEnabled" v-bind:facilities="facilities"></my-facilities>
   </div>
 </template>
@@ -43,8 +43,8 @@ export default {
     return {
       providers: data.providers,
       facilities: data.facilities,
-      createEnabled: false,
-      searchEnabled: true,
+      createEnabled: true,
+      searchEnabled: false,
       facilitiesEnabled: false
     };
   },
